@@ -16,7 +16,8 @@ void	ft_putpointer(unsigned long int n, size_t *len)
 {
 	if (!n)
 	{
-		ft_putstr("(nil)", len);
+		write(1, "(nil)", 5);
+		*len += 5;
 		return ;
 	}
 	else

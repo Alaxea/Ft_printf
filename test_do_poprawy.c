@@ -6,7 +6,7 @@
 /*   By: astefans <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 16:06:58 by astefans          #+#    #+#             */
-/*   Updated: 2024/03/19 14:26:40 by astefans         ###   ########.fr       */
+/*   Updated: 2024/03/19 16:21:45 by astefans         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,10 @@ int	main(void)
 	ft_printf("Hello, %s!\n", "world");
 	
 	//test do putnbr
-	size_t *count = (size_t *)malloc(sizeof(size_t));
-        *count = 0;
-	ft_putnbr(-2147483648, count);
-	printf("\n");
-	printf("liczba znaków to %zu\n", *count);
-	free(count);
+	//size_t count[15];
+	//int i = (int *)ft_putnbr(7, count);
+	//ft_printf("\n");
+	//ft_printf("liczba znaków to: '%d' ", i);
 
 	//test do putchar
 	size_t *len = (size_t *)malloc(sizeof(size_t));
@@ -47,7 +45,7 @@ int	main(void)
 	ft_puthex(number, &length, 1);
 	printf("\n");
 	printf("szesnastkowa reprezentacja liczby %u w malych literach to ", number);
-	printf("liczba znaków to %lu\n", length);
+	printf("liczba znaków to : '%u'\n", length);
 
 	//test do putpointer
 	unsigned long int dlugosc = 0;
@@ -64,7 +62,7 @@ int	main(void)
 	ft_putunsignint(nb, &leng);
 	printf("\n");
 	printf("unsigned in decimal base is: %lu ", nb);
-	printf("liczba znakow to %lu\n", leng);	
+	printf("liczba znakow to '%lu' ", leng);	
 	return (0);
 
 }

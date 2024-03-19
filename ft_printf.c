@@ -6,7 +6,7 @@
 /*   By: astefans <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 13:37:40 by astefans          #+#    #+#             */
-/*   Updated: 2024/03/19 14:10:33 by astefans         ###   ########.fr       */
+/*   Updated: 2024/03/19 19:06:23 by astefans         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,10 @@ int	ft_printf(const char *str, ...)
 	while (*str)
 	{
 		if (*str == '%')
+		{
+			str++;
 			ft_formats((char *)str, args, &len);
+		}
 		else
 			ft_putchar(*str, &len);
 		str++;
